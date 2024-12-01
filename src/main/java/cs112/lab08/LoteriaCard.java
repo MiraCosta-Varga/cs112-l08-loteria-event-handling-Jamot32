@@ -32,7 +32,6 @@ public class LoteriaCard
     private String cardName = "";
     private String imageName = "";
     private int cardNum = 0;
-
     //Constructor
     public LoteriaCard(String cardName, String imageName, int cardNum)
     {
@@ -81,22 +80,22 @@ public class LoteriaCard
         return this.imageName;
     }
 
-	/**
-	* Gets Image object for this card by reading it from the appropriate location in a replit project
-	*
-	* @return returns Image object that can be used to display it in an ImageView in GUI
-	**/
-	public Image getImage() {
-		FileInputStream input = null;
-		try {
-			input = new FileInputStream("./src/main/resources/images/" + this.imageName);
-		} catch (FileNotFoundException e) {
-			//e.printStackTrace();
-			System.err.println("ERROR: could not open file.");
-			System.exit(0);
-		}
-		return new Image(input);
-	}
+    /**
+     * Gets Image object for this card by reading it from the appropriate location in a replit project
+     *
+     * @return returns Image object that can be used to display it in an ImageView in GUI
+     **/
+    public Image getImage() {
+        FileInputStream input = null;
+        try {
+            input = new FileInputStream("./src/main/resources/images/" + this.imageName);
+        } catch (FileNotFoundException e) {
+            //e.printStackTrace();
+            System.err.println("ERROR: could not open file.");
+            System.exit(0);
+        }
+        return new Image(input);
+    }
 
     public void setImageName(String imageName)
     {
